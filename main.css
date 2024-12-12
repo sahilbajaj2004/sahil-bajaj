@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    background: linear-gradient(to right, rgb(192, 192, 192), rgb(34, 33, 33));
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.logo span{
+    color: gray;
+    text-shadow: 0 0 10px gray;
+}
+.hamburg, .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .contact-btn{
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid gray;
+    transition: 0.2s linear;
+}
+.nav-container .contact-btn a{
+    color: white;
+    transition: 0.3s linear;
+}
+.nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
+    background-color: gray;
+    color: white;
+}
+.nav-container .links a:hover{
+    color:black;
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: gray;
+}
+section{
+    width: 100%;
+    height: 90vh;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-container .image{
+    z-index: -1;
+    width: 50%;
+}
+.main-container .image img{
+    width: 100%;
+}
+.main-container .content{
+    color: black;
+    width: 40%;
+    min-height: 100px;
+}
+.content h1{
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+.content h1 span{
+    color: gray;
+    text-shadow: 0 0 10px gray;
+}
+.content .typewriter{
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+.content .typewriter span{
+    color: gray;
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px gray;
+}
+.typewriter span::before{
+    content: "Web Developer";
+    animation: words 15s infinite;
+}
+@keyframes words {
+    0%, 33%{
+        content: "Web Developer";
+    }
+    34%, 66%{
+        content: "Python Developer";
+    }
+}
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+.social-linkss i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color:transparent;
+    border: 0.2rem solid rgb(0, 0, 0);
+    border-radius: 50%;
+    color:black;
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+.social-linkss i:hover{
+    scale: 1.3;
+    color: gray;
+    background-color: black;
+    filter: drop-shadow(black);
+}
+.content button{
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: gray;
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.content button:hover{
+ scale: 1.1;
+ color: gray;
+ border: 2px solid gray;
+ background-color: transparent;
+ font-weight: 700;
+ box-shadow: 0 0 40px gray;
+}
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,.cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .cancel{
+        color: white;
+    }
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+* {
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-box {
+    background-color: rgba(148, 142, 142, 0.562);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+.owner-contact {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.owner-contact h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+.owner-contact p {
+    margin: 5px 0;
+}
+
+@media (max-width: 500px) {
+    .form-box {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+}

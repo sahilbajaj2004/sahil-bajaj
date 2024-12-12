@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Exprience</title>
+    <link rel="icon" href="Exprience.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Sahil</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="educaton.html">Eduction</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="exprience.html">Exprience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="projects.html">Projects</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact Us</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="educaton.html">Education</a>
+                <a href="exprience.html">Exprience</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+        <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                    <img src="Exprience.png" alt="pic">
+                </div>
+                <div class="content">
+                    <div class="typewriter" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">SO INFOTECH (P) LTD</div>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Java Intern(11/2021-05/2022)</p>
+                    <div class="typewriter" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Consult IT</div>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Python Developer(01/2024-06/2024)</p>
+                </div>
+            </div>
+        </section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+</body>
+</html>
